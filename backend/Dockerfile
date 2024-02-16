@@ -7,7 +7,7 @@ RUN mvn dependency:go-offline
 
 COPY src /workdir/server/src
 RUN apt-get update
-RUN apt-get install maven
+RUN apt-get install maven -y
 
 FROM builder AS dev-envs
 RUN <<EOF
